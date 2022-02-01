@@ -9,6 +9,15 @@ export const bech32Prefix = {
   consPub: AddressPrefix.Cosmos + AddressPrefix.Validator + AddressPrefix.Consensus + AddressPrefix.Public,
 };
 
+export function setBech32NetworkPrefix(value: string) {
+  bech32Prefix.accAddr = value;
+  bech32Prefix.accPub = value + AddressPrefix.Public;
+  bech32Prefix.valAddr = value + AddressPrefix.Validator + AddressPrefix.Operator;
+  bech32Prefix.valPub = value + AddressPrefix.Validator + AddressPrefix.Operator + AddressPrefix.Public;
+  bech32Prefix.consAddr = value + AddressPrefix.Validator + AddressPrefix.Consensus;
+  bech32Prefix.consPub = value + AddressPrefix.Validator + AddressPrefix.Consensus + AddressPrefix.Public;
+}
+
 export function setBech32Prefix(value: typeof bech32Prefix) {
   bech32Prefix.accAddr = value.accAddr;
   bech32Prefix.accPub = value.accPub;

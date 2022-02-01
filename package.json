@@ -1,5 +1,5 @@
 {
-  "name": "@cosmos-client/core",
+  "name": "cosmos-client",
   "description": "REST API client for Cosmos SDK blockchain",
   "version": "0.44.4",
   "author": "CauchyE, Inc.",
@@ -28,8 +28,8 @@
     "tweetnacl": "^1.0.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.15.8",
-    "@babel/preset-env": "^7.15.8",
+    "@babel/core": "^7.16.12",
+    "@babel/preset-env": "^7.16.11",
     "@commitlint/cli": "^13.2.1",
     "@commitlint/config-conventional": "^13.2.0",
     "@trivago/prettier-plugin-sort-imports": "^2.0.4",
@@ -38,7 +38,7 @@
     "@types/secp256k1": "^4.0.3",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.0.0",
-    "babel-jest": "^27.2.3",
+    "babel-jest": "^27.4.6",
     "eslint": "^8.0.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.25.2",
@@ -69,6 +69,10 @@
     "./openapi": {
       "node": "./cjs/openapi/index.js",
       "default": "./esm/openapi/index.js"
+    },
+    "./esm/types/address/config": {
+      "node": "./cjs/types/address/config.js",
+      "default": "./esm/types/address/config.ts"
     },
     "./package.json": "./package.json"
   }
